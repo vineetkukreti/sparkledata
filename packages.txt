@@ -1,0 +1,3 @@
+# packages in environment at C:\Users\vineet\AppData\Local\anaconda3\envs\cdata:
+#
+# Name                    Version                   Build  Channel
