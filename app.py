@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, send_file
+from flask import Flask, request, render_template, send_file , send_from_directory
 from werkzeug.utils import secure_filename
 
 import pandas as pd
@@ -56,6 +56,14 @@ def upload_file():
         return send_file(cleaned_file_path, as_attachment=True)
     else:
         return render_template('index.html', message='File type not allowed')
+
+@app.route('/eda_report')
+def index():
+    # Assuming the file is located in a folder named 'Eda'
+    name = 'diamonds.csv'
+    filename = f'eda_report_{name}.html'
+    return send_from_directory('Eda',filename )
+
 
 if __name__ == '__main__':
     app.run(debug=True)
