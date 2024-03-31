@@ -1,7 +1,7 @@
-31-03-2024 11:55:24.13 - INFO - Started validation of input parameters...
-31-03-2024 11:55:24.13 - INFO - Completed validation of input parameters
-31-03-2024 11:55:24.13 - INFO - Starting Handling Duplicate values
-31-03-2024 11:55:24.13 - INFO - Started EDA... Method: "AUTO"
-31-03-2024 11:56:17.29 - INFO - Completed EDA in 53.157654 seconds
-31-03-2024 11:56:17.29 - INFO - EDA HTML file downloaded successfully.
-31-03-2024 11:56:17.31 - INFO - AutoClean process completed in 53.182302 seconds
+31-03-2024 22:05:07.49 - INFO - Started validation of input parameters...
+31-03-2024 22:05:07.49 - INFO - Completed validation of input parameters
+31-03-2024 22:05:07.49 - INFO - Starting Handling Duplicate values
+31-03-2024 22:05:07.49 - INFO - Started EDA... Method: "AUTO"
+31-03-2024 22:05:10.52 - INFO - Completed EDA in 3.031965 seconds
+31-03-2024 22:05:10.52 - INFO - EDA HTML file downloaded successfully.
+31-03-2024 22:05:10.53 - INFO - AutoClean process completed in 3.039499 seconds

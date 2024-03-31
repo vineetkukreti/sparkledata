@@ -1,6 +1,5 @@
-from flask import Flask, request, render_template, send_file , send_from_directory
+from flask import Flask, request, render_template, send_file, send_from_directory
 from werkzeug.utils import secure_filename
-
 import pandas as pd
 import os
 from AutoClean.autoclean import AutoClean
@@ -26,6 +25,7 @@ def home():
 # Upload route
 @app.route('/upload', methods=['POST'])
 def upload_file():
+    global fname  # Declare fname as a global variable
     if 'file' not in request.files:
         return render_template('index.html', message='No file part')
     
@@ -41,8 +41,9 @@ def upload_file():
         
         # Perform cleaning
         df = pd.read_csv(file_path)
-        print(filename)
-        pipeline = AutoClean(df,filename)
+        fname = str(filename)  # Assigning value to fname
+        filename = f'eda_report_of_{filename}.html'
+        pipeline = AutoClean(df, filename)
         cleaned_df = pipeline.output
         cleaned_folder_path = app.config['CLEANED_FOLDER']
         if not os.path.exists(cleaned_folder_path):
@@ -59,11 +60,9 @@ def upload_file():
 
 @app.route('/eda_report')
 def index():
-    # Assuming the file is located in a folder named 'Eda'
-    name = 'diamonds.csv'
-    filename = f'eda_report_{name}.html'
-    return send_from_directory('Eda',filename )
-
+    global fname  # Declare fname as a global variable
+    filename = f'eda_report_of_{fname}.html'
+    return send_from_directory('Eda', filename)
 
 if __name__ == '__main__':
     app.run(debug=True)
