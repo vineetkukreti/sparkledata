@@ -42,15 +42,17 @@ def upload_file():
         # Perform cleaning
         df = pd.read_csv(file_path)
         fname = str(filename)  # Assigning value to fname
+        new_file = filename
         filename = f'eda_report_of_{filename}.html'
-        pipeline = AutoClean(df, filename)
+        
+        pipeline = AutoClean(df, new_file)
         cleaned_df = pipeline.output
         cleaned_folder_path = app.config['CLEANED_FOLDER']
         if not os.path.exists(cleaned_folder_path):
             os.makedirs(cleaned_folder_path)
         
         # Save cleaned DataFrame to CSV file
-        cleaned_filename = f"cleaned_{filename}"
+        cleaned_filename = f"cleaned_{new_file}"
         cleaned_file_path = os.path.join(cleaned_folder_path, cleaned_filename)
         cleaned_df.to_csv(cleaned_file_path, index=False)
         

@@ -1,7 +1,51 @@
-31-03-2024 22:05:07.49 - INFO - Started validation of input parameters...
-31-03-2024 22:05:07.49 - INFO - Completed validation of input parameters
-31-03-2024 22:05:07.49 - INFO - Starting Handling Duplicate values
-31-03-2024 22:05:07.49 - INFO - Started EDA... Method: "AUTO"
-31-03-2024 22:05:10.52 - INFO - Completed EDA in 3.031965 seconds
-31-03-2024 22:05:10.52 - INFO - EDA HTML file downloaded successfully.
-31-03-2024 22:05:10.53 - INFO - AutoClean process completed in 3.039499 seconds
+01-04-2024 12:32:48.58 - INFO - Started validation of input parameters...
+01-04-2024 12:32:48.58 - INFO - Completed validation of input parameters
+01-04-2024 12:32:48.58 - INFO - Starting Handling Duplicate values
+01-04-2024 12:32:48.59 - INFO - Started EDA... Method: "AUTO"
+01-04-2024 12:34:04.46 - INFO - Completed EDA in 75.870951 seconds
+01-04-2024 12:34:04.46 - INFO - EDA HTML file downloaded successfully.
+01-04-2024 12:34:04.48 - INFO - Started handling of missing values...
+01-04-2024 12:34:04.48 - DEBUG - 0 missing values found
+01-04-2024 12:34:04.48 - INFO - Completed handling of missing values in 0.002334 seconds
+01-04-2024 12:34:04.48 - INFO - Started handling of outliers... Method: "WINZ"
+01-04-2024 12:34:04.53 - DEBUG - Outlier imputation of 3 value(s) succeeded for feature "wheel-base"
+01-04-2024 12:34:04.53 - DEBUG - Outlier imputation of 1 value(s) succeeded for feature "length"
+01-04-2024 12:34:04.54 - DEBUG - Outlier imputation of 8 value(s) succeeded for feature "width"
+01-04-2024 12:34:04.57 - DEBUG - Outlier imputation of 10 value(s) succeeded for feature "engine-size"
+01-04-2024 12:34:04.60 - DEBUG - Outlier imputation of 28 value(s) succeeded for feature "compression-ratio"
+01-04-2024 12:34:04.61 - DEBUG - Outlier imputation of 2 value(s) succeeded for feature "city-mpg"
+01-04-2024 12:34:04.61 - DEBUG - Outlier imputation of 3 value(s) succeeded for feature "highway-mpg"
+01-04-2024 12:34:04.61 - INFO - Completed handling of outliers in 0.131153 seconds
+01-04-2024 12:34:04.62 - INFO - Started conversion of DATETIME features... Granularity: s
+01-04-2024 12:34:04.63 - INFO - Completed conversion of DATETIME features in 0.0152 seconds
+01-04-2024 12:34:04.63 - INFO - Started encoding categorical features... Method: "AUTO"
+01-04-2024 12:34:04.63 - DEBUG - Encoding skipped for feature "peak-rpm"
+01-04-2024 12:34:04.63 - DEBUG - Encoding to ONEHOT succeeded for feature "aspiration"
+01-04-2024 12:34:04.64 - DEBUG - Encoding skipped for feature "make"
+01-04-2024 12:34:04.64 - DEBUG - Encoding skipped for feature "bore"
+01-04-2024 12:34:04.64 - DEBUG - Encoding skipped for feature "stroke"
+01-04-2024 12:34:04.64 - DEBUG - Encoding to ONEHOT succeeded for feature "engine-type"
+01-04-2024 12:34:04.65 - DEBUG - Encoding to ONEHOT succeeded for feature "num-of-doors"
+01-04-2024 12:34:04.65 - DEBUG - Encoding skipped for feature "horsepower"
+01-04-2024 12:34:04.65 - DEBUG - Encoding skipped for feature "normalized-losses"
+01-04-2024 12:34:04.66 - DEBUG - Encoding to ONEHOT succeeded for feature "drive-wheels"
+01-04-2024 12:34:04.66 - DEBUG - Encoding to ONEHOT succeeded for feature "engine-location"
+01-04-2024 12:34:04.66 - DEBUG - Encoding to ONEHOT succeeded for feature "num-of-cylinders"
+01-04-2024 12:34:04.67 - DEBUG - Encoding to ONEHOT succeeded for feature "fuel-type"
+01-04-2024 12:34:04.67 - DEBUG - Encoding skipped for feature "price"
+01-04-2024 12:34:04.67 - DEBUG - Encoding to ONEHOT succeeded for feature "body-style"
+01-04-2024 12:34:04.68 - DEBUG - Encoding to ONEHOT succeeded for feature "fuel-system"
+01-04-2024 12:34:04.68 - INFO - Completed encoding of categorical features in 0.043924 seconds
+01-04-2024 12:34:04.68 - INFO - Started feature type conversion...
+01-04-2024 12:34:04.68 - DEBUG - Conversion to type INT succeeded for feature "symboling"
+01-04-2024 12:34:04.68 - DEBUG - Conversion to type FLOAT succeeded for feature "wheel-base"
+01-04-2024 12:34:04.68 - DEBUG - Conversion to type FLOAT succeeded for feature "length"
+01-04-2024 12:34:04.68 - DEBUG - Conversion to type FLOAT succeeded for feature "width"
+01-04-2024 12:34:04.68 - DEBUG - Conversion to type FLOAT succeeded for feature "height"
+01-04-2024 12:34:04.69 - DEBUG - Conversion to type INT succeeded for feature "curb-weight"
+01-04-2024 12:34:04.69 - DEBUG - Conversion to type INT succeeded for feature "engine-size"
+01-04-2024 12:34:04.69 - DEBUG - Conversion to type FLOAT succeeded for feature "compression-ratio"
+01-04-2024 12:34:04.69 - DEBUG - Conversion to type INT succeeded for feature "city-mpg"
+01-04-2024 12:34:04.69 - DEBUG - Conversion to type INT succeeded for feature "highway-mpg"
+01-04-2024 12:34:04.69 - INFO - Completed feature type conversion for 10 feature(s) in 0.015384 seconds
+01-04-2024 12:34:04.69 - INFO - AutoClean process completed in 76.117581 seconds
